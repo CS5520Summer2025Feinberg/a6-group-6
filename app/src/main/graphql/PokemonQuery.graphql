@@ -1,0 +1,12 @@
+query PokemonQuery($name: String!) {
+    pokemon(where: { name: { _eq: $name } }) {
+        id
+        name
+        pokemonsprites {
+            sprites
+        }
+        pokemoncries {
+            cries
+        }
+    }
+}
